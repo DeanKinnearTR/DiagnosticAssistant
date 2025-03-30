@@ -14,7 +14,7 @@ public class DiagnosticSession
         var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY")
                      ?? throw new Exception("Missing OPENAI_API_KEY");
 
-        _gpt = new MockGptClient();
+        _gpt = new ChatGptClient(apiKey);
 
         _messages.Add(GptMessage.System(
             """

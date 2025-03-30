@@ -23,8 +23,7 @@ public class ChatGptClient : IGptClient, IDisposable
     {
         var requestBody = new
         {
-            model = _model,
-            messages = messages
+            model = _model, messages
         };
 
         var json = JsonSerializer.Serialize(requestBody);
